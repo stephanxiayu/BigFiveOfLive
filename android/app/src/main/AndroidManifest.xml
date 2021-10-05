@@ -1,8 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.greatplaces">
    <application
-        android:label="greatplaces"
-        android:icon="@mipmap/ic_launcher">
+        android:label="Big Five of LIFE"
+        android:icon="@mipmap/ic_great">
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"

@@ -48,11 +48,11 @@ Navigator.of(context).pop();
            
                   ImageInput(_selectImage),
                   SizedBox(height: 10,),
-                         TextField(controller: _describtionController,cursorColor: Colors.white,
+                         TextField(controller: _titleController,cursorColor: Colors.white,
                     decoration: InputDecoration(labelText: "Titel"),style: TextStyle(color: Colors.white),
                   ),
                   SizedBox(height: 10,),
-                         TextField(controller: _titleController,cursorColor: Colors.white,
+                         TextField(controller: _describtionController,cursorColor: Colors.white,
                     decoration: InputDecoration(labelText: "Titel"),style: TextStyle(color: Colors.white),
                   ),
                   SizedBox(height: 10,),

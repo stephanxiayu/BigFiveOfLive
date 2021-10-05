@@ -1,4 +1,5 @@
 import 'package:bottom_navy_bar/bottom_navy_bar.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:greatplaces/datenBank/db_helper.dart';
 import 'package:greatplaces/provider/greatplaces.dart';
@@ -147,8 +148,12 @@ class _PlacesListScreenState extends State<PlacesListScreen> {
                                 itemBuilder: (context, index) =>
                                     Column(children: [
                                       Row(children: [
-                                        Text(greatPlaces
-                                            .items[index].describtion),
+                                        Container(height: 30,
+                                          child: SingleChildScrollView(
+                                            child: Text(greatPlaces
+                                                .items[index].title, style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
+                                          ),
+                                        ),
                                         Expanded(
                                             child: Align(
                                                 alignment: Alignment.topRight,
@@ -236,7 +241,7 @@ class _PlacesListScreenState extends State<PlacesListScreen> {
                                         padding: const EdgeInsets.all(8.0),
                                         child: Container(
                                             child: Text(greatPlaces
-                                                .items[index].title)),
+                                                .items[index].describtion, style: TextStyle(fontSize: 20,))),
                                       ),
                                     ]))),
               ),
@@ -303,20 +308,16 @@ class _PlacesListScreenState extends State<PlacesListScreen> {
         },
         items: <BottomNavyBarItem>[
           BottomNavyBarItem(
-              activeColor: Colors.white,
+              activeColor: Colors.lightGreen,
               inactiveColor: Colors.grey,
               title: Text('Add Picture'),
               icon: Icon(Icons.add_a_photo)),
           BottomNavyBarItem(
-              activeColor: Colors.white,
+              activeColor: Colors.lightGreen,
               inactiveColor: Colors.grey,
-              title: Text('Tasks'),
-              icon: Icon(Icons.text_fields)),
-          BottomNavyBarItem(
-              activeColor: Colors.white,
-              inactiveColor: Colors.grey,
-              title: Text('Item Three'),
-              icon: Icon(Icons.chat_bubble)),
+              title: Text('Add Tasks'),
+              icon: Icon(Icons.document_scanner)
+          ),
         ],
       ),
     );
